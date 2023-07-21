@@ -63,6 +63,8 @@ app.get("/get", async (req, res) => {
 });
 
 connection();
-app.listen(7700,()=>{
+
+const Port = process.env.Port || 7700;
+app.listen(Port,()=>{
     console.log("connected");
 })
